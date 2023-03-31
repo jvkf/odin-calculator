@@ -1,0 +1,109 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.main {
+  background-color: slategray;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calculator-container {
+  background-color: black;
+  width: 35%;
+  height: 70vh;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.display {
+  flex-grow: 1;
+  flex-basis: 30%;
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-weight: 600;
+  font-size: 4rem;
+}
+
+.display-text {
+  overflow-wrap: anywhere;
+}
+
+.container-buttons {
+  flex-grow: 1;
+  flex-basis: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.buttons-row {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.button {
+  height: 100%;
+  flex-grow: 1;
+  flex-basis: 0;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background-color: rgb(40, 40, 40);
+  border: 1px solid rgb(40, 40, 40);
+  color: white;
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+
+.button:hover,
+.button-touched {
+  background-color: rgb(50, 50, 50);
+  border: 1px solid rgb(50, 50, 50);
+}
+
+.orange-button {
+  background-color: orange;
+  border: 1px solid rgba(255, 165, 50, 0.9);
+}
+
+.orange-button:hover,
+.orange-button-touched {
+  background-color: rgba(255, 165, 50, 0.9);
+  border: 1px solid rgba(255, 165, 50, 0.9);
+}
+
+.grey-button {
+  background-color: silver;
+  border: 1px solid silver;
+}
+
+.grey-button:hover,
+.grey-button-touched {
+  background-color: rgba(192, 192, 192, 0.9);
+  border: 1px solid rgba(192, 192, 192, 0.9);
+}
+
+.padding-2x {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.padding-4y {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
