@@ -55,7 +55,11 @@ const calculator = {
   },
   calculatePercentage() {
     this.reinforceNumber();
-    this.currentValue = this.currentValue / 100; // This is the only "special" method because this operation must be done right after click of the sign, different from the others.
+    if (this.currentValue !== 0) {
+      this.currentValue = this.currentValue / 100;
+    } else if (this.memoryValue !== undefined) {
+      this.currentValue = this.memoryValue / 100;
+    } // This is the only "special" method because this operation must be done right after click of the sign, different from the others.
   },
   calculateSum() {
     const sum = this.memoryValue + this.currentValue;
@@ -159,7 +163,7 @@ function clear() {
 
 function calculatePerc() {
   calculator.calculatePercentage();
-  display.textContent = calculator.currentValue;
+  updateDisplay();
 }
 
 function deleteNumber() {
